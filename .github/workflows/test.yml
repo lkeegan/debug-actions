@@ -51,7 +51,7 @@ jobs:
             arch: "arm64"
             use_qemu: false
     name: "Build wheels on ${{ matrix.os }} (arch=${{ matrix.arch }}, skip=${{ matrix.skip }}, use_qemu=${{ matrix.use_qemu }})"
-    runs-on: matrix.os
+    runs-on: ${{ matrix.os }}
 
     steps:
     - uses: actions/checkout@v3
